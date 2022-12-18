@@ -7,6 +7,7 @@ body {
 main {
     margin: 10rem auto;
     width: 40%;
+    min-width: 400px;
     height: fit-content;
 }
 
@@ -14,7 +15,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(180deg, rgb(228, 179, 125), rgb(255, 196, 133));
+    background: linear-gradient(180deg, rgb(236, 201, 163), rgb(240, 180, 116));
     box-shadow: 0 0 25px 5px;
     border-radius: 20px;
     width: 100%;
@@ -31,17 +32,19 @@ input {
 
 button {
     display: inline-block;
-    width: 90%;
+    width: 50%;
     margin: 20px auto;
     font-size: 20px;
     box-shadow: 0 0 5px .2px;
     font-weight: 600;
-    border:1px solid white;
+    border: 1px solid white;
     border-radius: 5px;
 }
-button:last-of-type{
+
+button:last-of-type {
     margin-top: 0;
 }
+
 button:hover {
     cursor: pointer;
 }
@@ -52,4 +55,8 @@ button:active {
 
 h1 {
     font-size: 2rem;
+}
+
+p {
+    font-weight: 500;
 }

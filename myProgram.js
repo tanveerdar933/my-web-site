@@ -1,16 +1,19 @@
 function checkPalindrome() {
     const valueFromInput = document.getElementById("stringInput").value.trim();
-    if (valueFromInput || valueFromInput.length <= 10) {
+    if (valueFromInput && valueFromInput.length <= 10) {
         const reversedString = valueFromInput.split("").reverse().join("");
         if (valueFromInput === reversedString) {
-            document.getElementById("resultBox").innerHTML = "is palandrom";
+            document.getElementById("resultBox").innerHTML = `${valueFromInput} is a Palindrome`;
         }
         else {
-            document.getElementById("resultBox").innerHTML = "is not palandrom";
+            document.getElementById("resultBox").innerHTML = `${valueFromInput} is not a Palindrome`;
         }
     }
-    else if (valueFromInput.length > 10) {
+    else if(valueFromInput.length > 10) {
         document.getElementById("resultBox").innerHTML = "String must be max 10 char";
+    }
+    else{
+        document.getElementById("resultBox").innerHTML = ">> Enter String First <<";
     }
 }
 function clearScreen() {
