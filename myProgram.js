@@ -1,5 +1,16 @@
-function checkPalindrome(value) {
-    let checker = value.split("").reverse().join("");
-    return checker === value ? `${value} is a Palindrome` : `${value} is not a Palindrome`;
+function checkPalindrome() {
+    const valueFromInput = document.getElementById("stringInput").value.trim();
+    if (valueFromInput) {
+        const reversedString = valueFromInput.split("").reverse().join("");
+        if (valueFromInput === reversedString) {
+            document.getElementById("resultBox").innerHTML = "is palandrom";
+        }
+        else {
+            document.getElementById("resultBox").innerHTML = "is not palandrom";
+        }
+    }
 }
-checkPalindrome("HEllO");
+function clearScreen() {
+    document.getElementById("resultBox").innerHTML = ">> Result <<";
+    document.getElementById("stringInput").value = "";
+}
